@@ -143,7 +143,7 @@
   ];
 
   fonts = {
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
     fontDir.enable = true;
     fontconfig = {
       antialias = true;
@@ -157,7 +157,7 @@
       hinting.autohint = true;
       hinting.enable = true;
     };
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
