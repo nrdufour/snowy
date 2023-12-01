@@ -221,4 +221,6 @@
 
   users.extraGroups.vboxusers.members = [ "ndufour" ];
 
+  # Hmmm still need it ...
+  system.stateVersion = "23.11";
 }
