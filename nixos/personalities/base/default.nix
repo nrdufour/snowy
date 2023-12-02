@@ -2,6 +2,6 @@
     imports = [
         ./locales.nix
         ./nixos.nix
-        ./podman.nix
+        ./fish.nix
     ];
 }
