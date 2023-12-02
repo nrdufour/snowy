@@ -81,32 +81,6 @@
     /etc/nixos/private_ca.crt
   ];
 
-  fonts = {
-    enableDefaultPackages = true;
-    fontDir.enable = true;
-    fontconfig = {
-      antialias = true;
-      cache32Bit = true;
-      # TODO: Set fonts within GNOME Tweaks for the time being
-      # defaultFonts = {
-      #   monospace = [ "Ubuntu Mono Regular" ];
-      #   sansSerif = [ "Ubuntu Regular" ];
-      #   serif = [ "Ubuntu Regular" ];
-      # };
-      hinting.autohint = true;
-      hinting.enable = true;
-    };
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
-      # noto-fonts-extra
-      ubuntu_font_family
-      fira-code
-      fira-code-symbols
-    ];
-  };
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
