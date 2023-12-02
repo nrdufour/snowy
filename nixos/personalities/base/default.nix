@@ -4,5 +4,6 @@
         ./nixos.nix
         ./fish.nix
         ./network.nix
+        ./users.nix
     ];
 }
