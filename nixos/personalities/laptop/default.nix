@@ -4,5 +4,6 @@
         ./fonts.nix
         ./dm
         ./printing.nix
+        ./steam.nix
     ];
 }
