@@ -5,5 +5,6 @@
         ./fish.nix
         ./network.nix
         ./users.nix
+        ./bootloader.nix
     ];
 }
