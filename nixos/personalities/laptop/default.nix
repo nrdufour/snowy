@@ -1,5 +1,6 @@
 {
     imports = [
+        ./latest_kernel.nix
         ./sound.nix
         ./fonts.nix
         ./dm
