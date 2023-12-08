@@ -1,14 +1,21 @@
 {
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
+    # Enable wayland for chrome/electron
+    # See https://nixos.wiki/wiki/Wayland
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    gtk.iconCache.enable = true;
 
-    # Enable the GNOME Desktop Environment.
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
-
-    # Configure keymap in X11
-    services.xserver = {
-        layout = "us";
-        xkbVariant = "";
+    services = {
+        xserver = {
+            enable = true;
+            desktopManager.gnome = {
+                enable = true;
+            };
+            displayManager.gdm = {
+                enable = true;
+                wayland = true;
+                autoSuspend = true;
+            };
+        };
+        geoclue2.enable = true;
     };
 }
