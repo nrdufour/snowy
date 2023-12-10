@@ -1,7 +1,8 @@
 {
     # Enable wayland for chrome/electron
     # See https://nixos.wiki/wiki/Wayland
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    ### Disabling it to see if it's causing vscode to misbehave with gnome favorite system
+    #environment.sessionVariables.NIXOS_OZONE_WL = "1";
     gtk.iconCache.enable = true;
 
     services = {
