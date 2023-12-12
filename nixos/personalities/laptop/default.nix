@@ -6,5 +6,6 @@
         ./dm
         ./printing.nix
         ./steam.nix
+        ./video.nix
     ];
 }
