@@ -12,6 +12,7 @@
         git
         wget
         chezmoi
+        pre-commit
 
         # Because you know ... python
         python3
