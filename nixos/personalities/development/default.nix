@@ -13,9 +13,11 @@
         wget
         chezmoi
         pre-commit
+        ripgrep
 
-        # Because you know ... python
+        # Because you know ... python and go
         python3
+        go
 
         # K8s tools
         kubectl

@@ -3,6 +3,7 @@
         (vscode-with-extensions.override {
             vscodeExtensions = with vscode-extensions; [
             ms-python.python
+            ms-vscode.makefile-tools
             ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
                 {
                     name = "signageos-vscode-sops";
