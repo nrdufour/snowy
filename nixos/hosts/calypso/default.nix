@@ -5,6 +5,7 @@
             ../../personalities/base
             ../../personalities/development
             ../../personalities/laptop
+            ../../personalities/ham
         ];
 
     # List packages installed in system profile. To search, run:
