@@ -4,6 +4,7 @@
         ./virtualbox.nix
         ./privateca
         ./vscode.nix
+        ./libvirtd.nix
     ];
 
     environment.systemPackages = with pkgs; [
