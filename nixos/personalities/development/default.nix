@@ -32,5 +32,6 @@
         # Make it so
         gnumake
         direnv
+        vagrant
     ];
 }
