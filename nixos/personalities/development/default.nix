@@ -7,6 +7,9 @@
         ./libvirtd.nix
     ];
 
+    # Enable aarch64 emulation
+    boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
     environment.systemPackages = with pkgs; [
         # Must have
         vim
