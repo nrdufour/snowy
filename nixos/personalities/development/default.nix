@@ -18,6 +18,8 @@
         chezmoi
         pre-commit
         ripgrep
+        file
+        tree
 
         # Because you know ... python and go
         python3
