@@ -3,7 +3,7 @@
 ## sudo nixos-rebuild test -I nixos-config=./configuration.nix
 
 .PHONY: update
-check:
+update:
 	nix flake update
 
 .PHONY: check
