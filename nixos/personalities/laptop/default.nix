@@ -7,5 +7,6 @@
         ./printing.nix
         ./steam.nix
         ./video.nix
+        ./bluetooth.nix
     ];
 }
