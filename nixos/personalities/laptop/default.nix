@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
     imports = [
         #./latest_kernel.nix
         ./sound.nix
@@ -8,5 +8,9 @@
         ./steam.nix
         ./video.nix
         ./bluetooth.nix
+    ];
+
+    environment.systemPackages = with pkgs; [
+        inkscape
     ];
 }
