@@ -24,6 +24,7 @@
         # Because you know ... python and go
         python3
         go
+        go-tools
 
         # K8s tools
         kubectl
