@@ -13,7 +13,6 @@
     environment.systemPackages = with pkgs; [
         weechat
         starship
-        discord
         gnome3.gnome-tweaks
     ];
 
