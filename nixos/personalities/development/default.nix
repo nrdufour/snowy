@@ -20,6 +20,7 @@
         ripgrep
         file
         tree
+        starship
 
         # Because you know ... python and go
         python3

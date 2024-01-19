@@ -12,8 +12,6 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
         weechat
-        starship
-        gnome3.gnome-tweaks
     ];
 
     networking.hostName = "calypso";
