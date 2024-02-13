@@ -6,6 +6,7 @@
         shell = pkgs.fish;
         packages = with pkgs; [
             firefox
+            ungoogled-chromium
         ];
     };
 }
