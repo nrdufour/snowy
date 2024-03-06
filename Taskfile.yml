@@ -1,0 +1,12 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  flake: .taskfiles/flake/Taskfile.yaml
+
+tasks:
+
+  default:
+    silent: true
+    cmd: task -l
