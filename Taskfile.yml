@@ -3,7 +3,7 @@
 version: '3'
 
 includes:
-  flake: .taskfiles/flake/Taskfile.yaml
+  nix: .taskfiles/nix/Taskfile.yaml
 
 tasks:
 
