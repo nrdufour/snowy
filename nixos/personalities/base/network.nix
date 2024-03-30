@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
     # Enable networking
     networking.networkmanager.enable = true;
 
@@ -8,4 +8,8 @@
         enable = true;
         # fallbackDns = [ "9.9.9.9" "1.1.1.1" ];
     };
+
+    environment.systemPackages = with pkgs; [
+        update-resolv-conf
+    ];
 }
