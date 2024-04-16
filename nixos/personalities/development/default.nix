@@ -21,6 +21,8 @@
         file
         tree
         starship
+        go-task
+        pwgen
 
         # Because you know ... python and go
         python3
