@@ -33,6 +33,7 @@
         kubectl
         kubernetes-helm
         fluxcd
+        k9s
 
         # encryption
         sops
