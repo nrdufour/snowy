@@ -43,5 +43,8 @@
         gnumake
         direnv
         vagrant
+
+        # Becoming must-have
+        ollama
     ];
 }
