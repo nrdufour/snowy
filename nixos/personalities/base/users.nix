@@ -7,6 +7,7 @@
         packages = with pkgs; [
             firefox
             ungoogled-chromium
+            thunderbird
         ];
     };
 }
