@@ -10,4 +10,10 @@
         defaultNetwork.settings.dns_enabled = true;
         };
     };
+
+    # Fake your way for docker
+    environment.variables = {
+        DOCKER_HOST = "unix:///run/podman/podman.sock";
+    };
+    users.extraGroups.podman.members = [ "ndufour" ];
 }
