@@ -6,13 +6,8 @@
             ../../personalities/development
             ../../personalities/laptop
             ../../personalities/ham
+            ../../personalities/chat
         ];
-
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
-    environment.systemPackages = with pkgs; [
-        weechat
-    ];
 
     networking.hostName = "calypso";
 
