@@ -2,9 +2,9 @@
     nix = {
         settings = {
             trusted-substituters = [
+              "https://nrdufour.cachix.org"
               "https://nix-community.cachix.org"
               "https://numtide.cachix.org"
-              "https://nrdufour.cachix.org"
             ];
 
             trusted-public-keys = [
