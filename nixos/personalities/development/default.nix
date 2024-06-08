@@ -23,6 +23,7 @@
         starship
         go-task
         pwgen
+        cachix
 
         # Because you know ... python and go
         python3
