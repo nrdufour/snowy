@@ -13,6 +13,8 @@
               "nrdufour.cachix.org-1:nwmZmZ3b4h4cEJtIRib7trk8SVB49trCnlxVSNz0YQs="
             ];
 
+            trusted-users = [ "root" "@wheel" ];
+
             # Fallback quickly if substituters are not available.
             connect-timeout = 5;
 
