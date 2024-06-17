@@ -32,6 +32,7 @@
 
         # K8s tools
         kubectl
+        kubectl-cnpg
         kubernetes-helm
         fluxcd
         k9s
