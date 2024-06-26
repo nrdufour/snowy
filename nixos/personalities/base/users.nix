@@ -8,6 +8,7 @@
             firefox
             ungoogled-chromium
             thunderbird
+            librewolf
         ];
     };
 }
