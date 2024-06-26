@@ -9,6 +9,7 @@
             ungoogled-chromium
             thunderbird
             librewolf
+            betterbird
         ];
     };
 }
