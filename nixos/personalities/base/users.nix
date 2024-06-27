@@ -12,4 +12,11 @@
             betterbird
         ];
     };
+
+    # Enable drm protected content playing in chrome
+    nixpkgs.config = {
+        chromium = {
+            enableWideVine = true;
+        };
+    };
 }
