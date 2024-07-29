@@ -6,7 +6,7 @@
         shell = pkgs.fish;
         packages = with pkgs; [
             firefox
-            chromium
+            google-chrome
             thunderbird
             librewolf
             betterbird
