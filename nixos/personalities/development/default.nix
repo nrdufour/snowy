@@ -1,10 +1,11 @@
 { pkgs, ... }: {
     imports = [
-        ./podman.nix
+        # ./podman.nix
         ./virtualbox.nix
         ./privateca
         ./vscode.nix
         ./libvirtd.nix
+        ./container.nix
     ];
 
     # Enable aarch64 emulation
