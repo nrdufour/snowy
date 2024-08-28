@@ -49,6 +49,5 @@
 
         # Becoming must-have
         ollama
-        unstable.forgejo-cli
     ];
 }
