@@ -37,6 +37,8 @@
         kubernetes-helm
         fluxcd
         k9s
+        timoni
+        cue
 
         # encryption
         sops
