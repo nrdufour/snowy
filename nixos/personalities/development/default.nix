@@ -39,6 +39,7 @@
         k9s
         timoni
         cue
+        kubecolor
 
         # encryption
         sops
