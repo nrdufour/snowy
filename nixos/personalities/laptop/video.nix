@@ -4,5 +4,6 @@
         vlc
         ytfzf
         freetube
+        kooha # screen recorder
     ];
 }

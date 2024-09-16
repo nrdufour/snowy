@@ -48,6 +48,7 @@
         gnumake
         direnv
         vagrant
+        bottles
 
         # Becoming must-have
         ollama
