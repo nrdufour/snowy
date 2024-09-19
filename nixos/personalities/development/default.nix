@@ -25,6 +25,7 @@
         go-task
         pwgen
         cachix
+        arduino-ide
 
         # Because you know ... python and go
         python3
