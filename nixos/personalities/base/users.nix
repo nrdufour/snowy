@@ -2,7 +2,7 @@
     users.users.ndufour = {
         isNormalUser = true;
         description = "Nicolas Dufour";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "dialout" ];
         shell = pkgs.fish;
         packages = with pkgs; [
             firefox
