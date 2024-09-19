@@ -28,9 +28,13 @@
         arduino-ide
 
         # Because you know ... python and go
-        python3
         go
         go-tools
+
+        (pkgs.python3.withPackages (python-pkgs: [
+            # select Python packages here
+            python-pkgs.pyserial
+        ]))
 
         # K8s tools
         kubectl
