@@ -15,9 +15,14 @@
     #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, ... }@inputs:
     let
     system = "x86_64-linux";
     overlay-unstable = final: prev: {
@@ -29,6 +34,7 @@
     in {
       nixosConfigurations.calypso = nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
         modules = [
           # Overlays-module makes "pkgs.unstable" available in configuration.nix
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
