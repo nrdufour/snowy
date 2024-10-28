@@ -8,6 +8,17 @@
     programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [
-        atlauncher  # for minecraft
+        # for minecraft
+        (atlauncher.override { 
+            additionalLibs = [
+                xorg.libX11
+                xorg.libXcursor
+                xorg.libXext
+                xorg.libXrender
+                xorg.libXtst
+                xorg.libXi
+                xorg.libXrandr
+            ];
+        })
     ];
 }
