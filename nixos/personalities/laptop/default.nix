@@ -5,7 +5,7 @@
         ./fonts.nix
         ./dm
         ./printing.nix
-        ./steam.nix
+        ./gaming.nix
         ./video.nix
         ./bluetooth.nix
     ];
