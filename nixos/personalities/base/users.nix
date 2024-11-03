@@ -9,7 +9,7 @@
             google-chrome
             thunderbird
             librewolf
-            betterbird
+            # betterbird ## Disabling it because of CVE-2024-4367
         ];
     };
 
