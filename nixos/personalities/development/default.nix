@@ -26,6 +26,8 @@
         pwgen
         cachix
         arduino-ide
+        restic
+        rclone
 
         # Because you know ... python and go
         go
