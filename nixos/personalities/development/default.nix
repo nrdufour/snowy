@@ -5,7 +5,7 @@
         ./privateca
         ./vscode.nix
         ./libvirtd.nix
-        ./container.nix
+        # ./container.nix
     ];
 
     # Enable aarch64 emulation
