@@ -1,11 +1,12 @@
 name: ci
 on:
-  # schedule:
-  #   - cron: '0 */3 * * *'
+  schedule:
+    - cron: '0 */12 * * *'
   push:
     branches: ["main"]
-    paths-ignore:
-      - '!.forgejo/workflows/renovate.yaml'
+    paths:
+      - '.forgejo/workflows/renovate.yaml'
+      - 'renovate.json5'
 
 jobs:
   renovate:
