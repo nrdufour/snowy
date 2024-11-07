@@ -29,6 +29,7 @@
         arduino-ide
         restic
         rclone
+        samba
 
         # Because you know ... python and go
         go
