@@ -30,6 +30,7 @@
         restic
         rclone
         samba
+        cifs-utils # useful to mount samba/cifs
 
         # Because you know ... python and go
         go
