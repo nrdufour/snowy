@@ -11,6 +11,10 @@
 
     networking.hostName = "calypso";
 
+    sops = {
+        defaultSopsFile = ../../../secrets/calypso.sops.yaml;
+    };
+
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "24.05";
 }
