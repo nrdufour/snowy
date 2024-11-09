@@ -22,9 +22,9 @@
       ];
       
       initialize = true;
-      repositoryFile  = config.sops.secrets."backups.localndufour.repository".path;
-      passwordFile    = config.sops.secrets."backups.localndufour.password".path;
-      environmentFile = config.sops.secrets."backups.localndufour.env".path;
+      repositoryFile  = config.sops.secrets."backups/localndufour/repository".path;
+      passwordFile    = config.sops.secrets."backups/localndufour/password".path;
+      environmentFile = config.sops.secrets."backups/localndufour/env".path;
 
       timerConfig = {
         OnCalendar = "daily";

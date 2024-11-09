@@ -15,9 +15,9 @@
     sops = {
         defaultSopsFile = ../../../secrets/calypso/secrets.sops.yaml;
         secrets = {
-            "backups.localndufour.repository" = {};
-            "backups.localndufour.password" = {};
-            "backups.localndufour.env" = {};
+            "backups/localndufour/repository" = {};
+            "backups/localndufour/password" = {};
+            "backups/localndufour/env" = {};
         };
     };
 
