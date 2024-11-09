@@ -13,7 +13,7 @@
     networking.hostName = "calypso";
 
     sops = {
-        defaultSopsFile = ../../../secrets/calypso.sops.yaml;
+        defaultSopsFile = ../../../secrets/calypso/secrets.sops.yaml;
         secrets = {
             "backups.localndufour.repository" = {};
             "backups.localndufour.password" = {};
