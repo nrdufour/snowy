@@ -12,4 +12,6 @@
     environment.systemPackages = with pkgs; [
         update-resolv-conf
     ];
+
+    services.sshd.enable = true;
 }
