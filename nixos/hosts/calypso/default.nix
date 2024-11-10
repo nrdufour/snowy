@@ -8,6 +8,7 @@
             ../../personalities/ham
             ../../personalities/chat
             ../../personalities/backups
+            ../../personalities/knowledge
         ];
 
     networking.hostName = "calypso";
