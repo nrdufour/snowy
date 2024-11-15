@@ -27,7 +27,7 @@
       environmentFile = config.sops.secrets."backups/localndufour/env".path;
 
       timerConfig = {
-        OnCalendar = "daily";
+        OnCalendar = "*-*-* 9:00:00";
         Persistent = true;
       };
     };
