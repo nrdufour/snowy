@@ -10,6 +10,7 @@
       zim-tools
 
       # News
-      liferay
+      liferea
+      newsflash
   ];
 }
