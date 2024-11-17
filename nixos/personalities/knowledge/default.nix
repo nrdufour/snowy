@@ -8,5 +8,8 @@
       kiwix
       kiwix-tools
       zim-tools
+
+      # News
+      liferay
   ];
 }
