@@ -1,7 +1,7 @@
 { pkgs, ... }: {
     imports = [
         # ./podman.nix
-        ./virtualbox.nix
+        # ./virtualbox.nix
         ./privateca
         ./vscode.nix
         ./libvirtd.nix
@@ -11,6 +11,8 @@
 
     # Enable aarch64 emulation
     boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
+    programs.direnv.enable = true;
 
     environment.systemPackages = with pkgs; [
         # Must have
@@ -57,8 +59,7 @@
 
         # Make it so
         gnumake
-        direnv
-        vagrant
+        # vagrant
         bottles
 
         # Becoming must-have

@@ -32,7 +32,10 @@
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
-        any-nix-shell
+        ## NOTE: disabling the usage of any-nix-shell for now
+        ## Instead, simply put the following alias in ~/.config/fish/config.fish
+        ## alias nix-shell='nix-shell --run fish'
+        # any-nix-shell
         nh
     ];
 }

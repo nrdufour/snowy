@@ -16,6 +16,6 @@
     environment.systemPackages = with pkgs; [
         inkscape
         unstable.discord
-        gnome3.gnome-tweaks
+        gnome-tweaks
     ];
 }
