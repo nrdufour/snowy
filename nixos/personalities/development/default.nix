@@ -12,6 +12,8 @@
     # Enable aarch64 emulation
     boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
+    programs.direnv.enable = true;
+
     environment.systemPackages = with pkgs; [
         # Must have
         vim
@@ -57,7 +59,6 @@
 
         # Make it so
         gnumake
-        direnv
         # vagrant
         bottles
 
