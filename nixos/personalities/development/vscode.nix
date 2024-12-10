@@ -46,8 +46,8 @@
                     charliermarsh.ruff
 
                     ## Remote development
-                    ms-vscode-remote.remote-containers
-                    ms-vscode-remote.remote-ssh
+                    # ms-vscode-remote.remote-containers
+                    # ms-vscode-remote.remote-ssh
 
                     ## Other
                     # gruntfuggly.todo-tree
