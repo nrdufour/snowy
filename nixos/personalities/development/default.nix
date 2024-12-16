@@ -7,6 +7,7 @@
         ./libvirtd.nix
         # ./container.nix
         ./docker.nix
+        ./ollama.nix
     ];
 
     # Enable aarch64 emulation
@@ -61,8 +62,5 @@
         gnumake
         # vagrant
         bottles
-
-        # Becoming must-have
-        ollama
     ];
 }
