@@ -9,4 +9,6 @@
     package = pkgs.unstable.ollama; # 0.5.4
     acceleration = "cuda";
   };
+
+  services.nextjs-ollama-llm-ui.enable = true;
 }
