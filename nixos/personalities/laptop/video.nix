@@ -1,6 +1,6 @@
 { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-        yt-dlp
+        unstable.yt-dlp
         vlc
         ytfzf
         freetube
