@@ -12,6 +12,8 @@
   # Ollama UI at port 3000
   services.nextjs-ollama-llm-ui.enable = true;
 
-  # Enabling llama-cpp as well (port 8080 by default)
-  services.llama-cpp.enable = true;
+  # Adding llama-cpp as is first to experiment
+  environment.systemPackages = with pkgs; [
+    llama-cpp
+  ];
 }
