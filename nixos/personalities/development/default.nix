@@ -7,7 +7,7 @@
         ./libvirtd.nix
         # ./container.nix
         ./docker.nix
-        ./ollama.nix
+        ./ai.nix
     ];
 
     # Enable aarch64 emulation
@@ -34,6 +34,8 @@
         rclone
         samba
         cifs-utils # useful to mount samba/cifs
+        dig
+        mqttui
 
         # Because you know ... python and go
         go
