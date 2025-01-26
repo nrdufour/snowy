@@ -1,6 +1,6 @@
 { pkgs, ... }: {
     imports = [
-        #./latest_kernel.nix
+        ./custom_kernel.nix
         ./sound.nix
         ./fonts.nix
         ./dm
