@@ -8,6 +8,10 @@
     programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [
+        # Lutris platform
+        ## See https://nixos.wiki/wiki/Lutris for more
+        lutris
+
         # for minecraft
         (atlauncher.override { 
             additionalLibs = [
