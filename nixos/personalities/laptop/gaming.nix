@@ -7,6 +7,9 @@
 
     programs.nix-ld.enable = true;
 
+    programs.gamemode.enable = true;
+    programs.gamescope.enable = true;
+
     environment.systemPackages = with pkgs; [
         # Lutris platform
         ## See https://nixos.wiki/wiki/Lutris for more
