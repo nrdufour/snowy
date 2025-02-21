@@ -18,5 +18,6 @@
         inkscape
         unstable.discord
         gnome-tweaks
+        koreader
     ];
 }
