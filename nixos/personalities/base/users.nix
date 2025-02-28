@@ -10,7 +10,7 @@
             chromium
             thunderbird
             librewolf
-            # betterbird ## Disabling it because of CVE-2024-4367
+            vivaldi
             bc
         ];
     };
