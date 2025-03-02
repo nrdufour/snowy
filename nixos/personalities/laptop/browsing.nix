@@ -9,6 +9,7 @@
     librewolf     # as the "burner"
     vivaldi       # as the stateful
     google-chrome # for peculiar sites
+    tor-browser   # really safe browsing
 
     # Emails
     thunderbird
