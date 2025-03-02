@@ -36,6 +36,7 @@
         cifs-utils # useful to mount samba/cifs
         dig
         mqttui
+        bc
 
         # Because you know ... python and go
         go
