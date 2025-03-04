@@ -1,4 +1,6 @@
 {
+  networking.hostId = "2b08729b";
+
   # setup boot
   boot = {
     supportedFilesystems = [
