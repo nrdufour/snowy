@@ -6,5 +6,6 @@
         ./network.nix
         ./users.nix
         ./bootloader.nix
+        ./zfs.nix
     ];
 }
