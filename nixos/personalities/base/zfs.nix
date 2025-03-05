@@ -8,10 +8,7 @@
     ];
     zfs = {
       forceImportRoot = false; # if stuck on boot, modify grub options , force importing isn't secure
-      extraPools = [ "tank" ];
     };
-
-
   };
 
   services.zfs = {
