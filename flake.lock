@@ -26,11 +26,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741638656,
-        "narHash": "sha256-Wm7J7kmZeTfWq/xIf+cqoh7QCWi40EBBvIV/L5dBCMg=",
+        "lastModified": 1741657825,
+        "narHash": "sha256-QzO/VwD7OAedSFpDuj7XCQSpiGEy597nrQNii5wPW5Q=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "401328473735d2802454d5521451c0e13d94903d",
+        "rev": "c87cf45f4901c86a62fae357a06a6ad84af2a496",
         "type": "github"
       },
       "original": {
