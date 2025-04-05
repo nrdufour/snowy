@@ -8,6 +8,7 @@
         # ./container.nix
         ./docker.nix
         ./ai.nix
+        ./cloud.nix
     ];
 
     # Enable aarch64 emulation
