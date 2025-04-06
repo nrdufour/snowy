@@ -38,6 +38,7 @@
         dig
         mqttui
         bc
+        nfs-utils # can't believe I didn't have it yet
 
         # Because you know ... python and go
         go
