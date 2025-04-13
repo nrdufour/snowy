@@ -39,6 +39,7 @@
         mqttui
         bc
         nfs-utils # can't believe I didn't have it yet
+        btop
 
         # Because you know ... python and go
         go
