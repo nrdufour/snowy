@@ -68,5 +68,6 @@
         gnumake
         # vagrant
         bottles
+        android-tools
     ];
 }
