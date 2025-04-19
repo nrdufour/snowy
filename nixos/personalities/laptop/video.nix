@@ -7,5 +7,6 @@
         freetube
         kooha # screen recorder
         mpv # good video player
+        obs-studio
     ];
 }
