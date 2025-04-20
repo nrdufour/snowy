@@ -23,4 +23,9 @@
         # Support the Video Audio (Hardware) Acceleration API
         gst_all_1.gst-vaapi
     ];
+
+
+  environment.variables = {
+    GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";
+  };
 }
