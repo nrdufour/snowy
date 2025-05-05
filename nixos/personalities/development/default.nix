@@ -1,7 +1,7 @@
 { pkgs, ... }: {
     imports = [
         # ./podman.nix
-        # ./virtualbox.nix
+        ./virtualbox.nix
         ./privateca
         ./vscode.nix
         ./libvirtd.nix
