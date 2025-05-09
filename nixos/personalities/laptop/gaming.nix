@@ -16,6 +16,8 @@
         lutris
 
         # for minecraft
+        prismlauncher
+        
         (atlauncher.override { 
             additionalLibs = [
                 xorg.libX11
