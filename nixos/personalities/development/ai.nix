@@ -7,6 +7,7 @@
   services.ollama = {
     enable = true;
     acceleration = "cuda";
+    package = pkgs.unstable.ollama;
   };
 
   # Ollama UI at port 3000
