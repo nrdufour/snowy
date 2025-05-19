@@ -66,6 +66,9 @@
                     bpruitt-goddard.mermaid-markdown-syntax-highlighting
                     bashmish.es6-string-css
                     # github.vscode-pull-request-github
+
+                    # for ollama and others ;)
+                    continue.continue
                 ];
 
         })
