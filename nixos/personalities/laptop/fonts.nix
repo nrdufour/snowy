@@ -8,6 +8,7 @@
             hinting.autohint = true;
             hinting.enable = true;
         };
+        
         packages = with pkgs; [
             noto-fonts
             noto-fonts-cjk-sans
@@ -16,7 +17,8 @@
             ubuntu_font_family
             fira-code
             fira-code-symbols
-            nerdfonts
-        ];
+        ]
+        # Installing all nerd-fonts (since 25.05)
+        ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
     };
 }
