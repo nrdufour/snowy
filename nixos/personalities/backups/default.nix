@@ -30,6 +30,12 @@
         OnCalendar = "*-*-* 9:00:00";
         Persistent = true;
       };
+
+      pruneOpts = [
+        "--keep-daily 14"
+        "--keep-weekly 4"
+        "--keep-monthly 1"
+      ];
     };
 
   };
