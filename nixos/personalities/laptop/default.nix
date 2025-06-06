@@ -20,5 +20,6 @@
         unstable.discord
         gnome-tweaks
         koreader
+        gimp
     ];
 }
