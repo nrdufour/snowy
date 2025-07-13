@@ -20,20 +20,14 @@
                     hashicorp.terraform
                     jnoortheen.nix-ide
                     mrmlnc.vscode-json5
-                    # ms-azuretools.vscode-docker
                     ms-python.python
                     redhat.ansible
                     redhat.vscode-yaml
                     tamasfe.even-better-toml
                     helm-ls.helm-ls
                     ms-vscode.makefile-tools
-                    grafana.vscode-jsonnet
                     github.vscode-github-actions
-                    ms-vscode.cpptools-extension-pack
-                    unifiedjs.vscode-mdx
-                    # ms-python.vscode-pylance
                     ms-python.black-formatter
-                    nickgo.cuelang
 
                     ## Formatters
                     esbenp.prettier-vscode
@@ -50,7 +44,6 @@
                     # ms-vscode-remote.remote-ssh
 
                     ## Other
-                    # gruntfuggly.todo-tree
                     ionutvmi.path-autocomplete
                     luisfontes19.vscode-swissknife
                     ms-kubernetes-tools.vscode-kubernetes-tools
@@ -59,13 +52,10 @@
                     shd101wyy.markdown-preview-enhanced
                     bierner.emojisense
                     yzhang.markdown-all-in-one
-                    streetsidesoftware.code-spell-checker
-                    # github.copilot
                     mechatroner.rainbow-csv
                     tobermory.es6-string-html
                     bpruitt-goddard.mermaid-markdown-syntax-highlighting
                     bashmish.es6-string-css
-                    # github.vscode-pull-request-github
 
                     # for ollama and others ;)
                     continue.continue
