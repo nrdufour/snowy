@@ -14,6 +14,7 @@
       ];
       exclude = [
         "/home/ndufour/.local/share/Steam"
+        "/home/ndufour/.local/share/Trash"
         "/home/ndufour/.cache"
         "/home/ndufour/.ollama"
         "/home/ndufour/.cargo"
