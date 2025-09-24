@@ -40,6 +40,7 @@
         bc
         nfs-utils # can't believe I didn't have it yet
         btop
+        jq
 
         # Because you know ... python and go
         go
@@ -56,6 +57,7 @@
         krew
         kubernetes-helm
         fluxcd
+        argocd
         k9s
         timoni
         cue
