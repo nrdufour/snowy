@@ -25,25 +25,25 @@ The system uses SOPS for secret management with age encryption keys defined in `
 
 ## Common Commands
 
-All development tasks are managed through Taskfile (task runner):
+All development tasks are managed through just (command runner):
 
 ### Core NixOS Operations
-- `task nix:update` - Update flake lock file (`nix flake update`)
-- `task nix:check` - Validate flake configuration (`nix flake check`)
-- `task nix:test` - Test deployment without boot changes (`nixos-rebuild test`)
-- `task nix:switch` - Deploy and create new boot generation (`nixos-rebuild switch`)
+- `just nix-update` - Update flake lock file (`nix flake update`)
+- `just nix-check` - Validate flake configuration (`nix flake check`)
+- `just nix-test` - Test deployment without boot changes (`nixos-rebuild test`)
+- `just nix-switch` - Deploy and create new boot generation (`nixos-rebuild switch`)
 
 ### Secret Management
-- `task sops:update` - Update all SOPS secret files with latest keys
+- `just sops-update` - Update all SOPS secret files with latest keys
 
 ### Available Tasks
-- `task` or `task -l` - List all available tasks
+- `just` or `just --list` - List all available tasks
 
 ## Dependencies
 
 - Nix with flakes enabled
 - SOPS for secret management
-- Task runner for build automation
+- just command runner for build automation
 - Age encryption for secrets
 
 ## Host Configuration
