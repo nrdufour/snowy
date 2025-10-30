@@ -17,7 +17,7 @@
 
                     ## Language support
                     golang.go
-                    hashicorp.terraform
+                    # hashicorp.terraform  # Temporarily disabled due to build issue
                     jnoortheen.nix-ide
                     mrmlnc.vscode-json5
                     ms-python.python
