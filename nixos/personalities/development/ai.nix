@@ -81,5 +81,46 @@
       echo "If Ollama still can't see GPU, you may need to logout/login from GNOME"
       echo "or check logs with: journalctl -u ollama -n 50"
     '')
+
+    # Check if Ollama is using GPU
+    (pkgs.writeShellScriptBin "ollama-gpu-status" ''
+      echo "=== Ollama GPU Status ==="
+      echo ""
+
+      # Check if Ollama is running
+      if ! systemctl is-active --quiet ollama; then
+        echo "❌ Ollama service is not running"
+        exit 1
+      fi
+
+      echo "✓ Ollama service is running"
+      echo ""
+
+      # Check logs for GPU detection (from current boot, find most recent)
+      echo "GPU Detection from logs:"
+      GPU_INFO=$(journalctl -u ollama -b | grep "inference compute" | tail -1)
+
+      if [ -z "$GPU_INFO" ]; then
+        echo "⚠ No GPU detection logs found"
+        echo "  Try restarting: sudo systemctl restart ollama"
+      elif echo "$GPU_INFO" | grep -q "library=cuda"; then
+        GPU_NAME=$(echo "$GPU_INFO" | grep -oP 'name="\K[^"]+' || echo "Unknown")
+        GPU_VRAM=$(echo "$GPU_INFO" | grep -oP 'total="\K[^"]+' || echo "Unknown")
+        echo "✓ Using CUDA GPU: $GPU_NAME"
+        echo "  VRAM: $GPU_VRAM"
+      elif echo "$GPU_INFO" | grep -q "library=cpu"; then
+        echo "❌ Using CPU (GPU not detected)"
+        echo "  Run 'sudo reset-gpu' to fix"
+      fi
+
+      echo ""
+      echo "Current GPU processes:"
+      ${pkgs.lsof}/bin/lsof /dev/nvidia* 2>/dev/null | grep ollama || echo "  No Ollama processes using GPU"
+
+      echo ""
+      echo "NVIDIA GPU Status:"
+      ${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader,nounits 2>/dev/null | \
+        awk '{printf "  GPU Utilization: %s%%\n  VRAM Used: %s MB / %s MB\n", $1, $2, $3}' || echo "  Could not query GPU"
+    '')
   ];
 }
