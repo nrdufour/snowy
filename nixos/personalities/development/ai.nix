@@ -114,13 +114,13 @@
       fi
 
       echo ""
-      echo "Current GPU processes:"
-      ${pkgs.lsof}/bin/lsof /dev/nvidia* 2>/dev/null | grep ollama || echo "  No Ollama processes using GPU"
-
-      echo ""
-      echo "NVIDIA GPU Status:"
-      ${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader,nounits 2>/dev/null | \
-        awk '{printf "  GPU Utilization: %s%%\n  VRAM Used: %s MB / %s MB\n", $1, $2, $3}' || echo "  Could not query GPU"
+      echo "GPU Usage:"
+      if command -v nvidia-smi >/dev/null 2>&1; then
+        nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader,nounits 2>/dev/null | \
+          awk '{printf "  GPU Utilization: %s%%\n  VRAM Used: %s MB / %s MB\n", $1, $2, $3}' || echo "  Could not query GPU"
+      else
+        echo "  nvidia-smi not found in PATH"
+      fi
     '')
   ];
 }
