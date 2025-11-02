@@ -38,28 +38,48 @@
 
     # GPU reset helper script for when CUDA gets stuck after gaming
     (pkgs.writeShellScriptBin "reset-gpu" ''
+      echo "=== GPU Reset for Ollama ==="
+      echo ""
       echo "Checking for processes using NVIDIA GPU..."
-      ${pkgs.lsof}/bin/lsof /dev/nvidia* 2>/dev/null || echo "No processes found"
+      ${pkgs.lsof}/bin/lsof /dev/nvidia* 2>/dev/null | grep -v "gnome-shell" || echo "No non-GNOME processes found"
 
-      echo "Stopping Ollama..."
+      # Kill any lingering Steam processes
+      echo ""
+      echo "Killing Steam processes..."
+      ${pkgs.procps}/bin/pkill -f "steam" || echo "No Steam processes found"
+      sleep 2
+
+      # Try to unload just the UVM module (CUDA-specific)
+      echo ""
+      echo "Attempting to reset CUDA subsystem..."
+
+      # Stop Ollama first
       systemctl stop ollama
 
-      echo "Reloading NVIDIA kernel modules..."
-      modprobe -r nvidia_uvm nvidia_drm nvidia_modeset nvidia || {
-        echo "Failed to unload modules. Some processes may still be using the GPU."
-        echo "Try closing Steam, games, or other GPU applications first."
-        exit 1
-      }
+      # Try to unload nvidia_uvm (CUDA-specific module)
+      if modprobe -r nvidia_uvm 2>/dev/null; then
+        echo "✓ Unloaded nvidia_uvm module"
+        sleep 1
+        modprobe nvidia_uvm
+        echo "✓ Reloaded nvidia_uvm module"
+      else
+        echo "⚠ Could not reload nvidia_uvm (GNOME is using GPU)"
+        echo "  Trying alternative: restart Ollama with fresh environment"
+      fi
 
-      sleep 1
-      modprobe nvidia nvidia_modeset nvidia_drm nvidia_uvm
-
-      echo "Starting Ollama..."
+      # Restart Ollama (will pick up proper environment variables)
+      echo ""
+      echo "Restarting Ollama..."
       systemctl start ollama
 
-      echo "GPU reset complete. Testing CUDA..."
       sleep 2
-      systemctl status ollama
+      echo ""
+      echo "=== Status ==="
+      systemctl status ollama --no-pager -l | head -20
+
+      echo ""
+      echo "If Ollama still can't see GPU, you may need to logout/login from GNOME"
+      echo "or check logs with: journalctl -u ollama -n 50"
     '')
   ];
 }
