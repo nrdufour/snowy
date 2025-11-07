@@ -1,5 +1,11 @@
 # Snowy
 
+> **⚠️ ARCHIVED REPOSITORY**
+>
+> This repository is now archived. All active development has moved to **avalanche**:
+> - GitHub: https://github.com/nrdufour/avalanche
+> - Internal Forgejo: https://forge.internal/nemo/avalanche
+
 Nicolas Dufour's Nixos flake configuration to setup the laptop (for now).
 
 ## Usage
